@@ -1,0 +1,57 @@
+1. Soccer (Football)
+
+Source: StatsBomb Open Data
+
+Includes: Event-level data (passes, shots, xG, etc.), player stats, match info.
+
+Great for: Tactical analysis, xG modeling, player evaluation.
+
+
+
+---
+
+2. Basketball
+
+Source: NBA Stats or Basketball Reference
+
+Alternate: Kaggle NBA Dataset
+
+Includes: Box scores, advanced metrics (PER, TS%, etc.), player tracking data (NBA API).
+
+Great for: Player comparison, team strategies, shot chart analysis.
+
+
+
+---
+
+3. American Football (NFL)
+
+Source: NFL Big Data Bowl
+
+Includes: Player tracking data, play-by-play, game context.
+
+Great for: Play calling analysis, player movement, strategy optimization.
+
+
+
+---
+
+4. Baseball
+
+Source: Baseball Savant or Lahman Database
+
+Includes: Pitch-level data, Statcast, hitting/pitching metrics.
+
+Great for: Sabermetrics, lineup optimization, pitcher/batter matchups.
+
+
+
+---
+
+5. Cricket
+
+Source: Cricsheet
+
+Includes: Ball-by-ball data, match outcomes.
+
+Great for: Bowling strategies, batsman analysis, win probabilities.
