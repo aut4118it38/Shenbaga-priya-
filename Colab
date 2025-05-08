@@ -1,0 +1,34 @@
+import pandas as pd
+
+# Load data
+df = pd.read_csv('players_stats.csv')
+
+# Normalize performance scores
+def performance_score(row):
+    # Weighted score based on assumed importance
+    return (
+        row['Goals'] * 4 +
+        row['Assists'] * 3 +
+        row['PassAccuracy'] * 0.1 +
+        row['Tackles'] * 0.5 +
+        row['Rating'] * 5
+    )
+
+df['PerformanceScore'] = df.apply(performance_score, axis=1)
+
+# Top players
+top_players = df.sort_values(by='PerformanceScore', ascending=False)
+
+# Strategy Suggestion: Optimal team based on top performers per position
+optimal_team = df.loc[df.groupby('Position')['PerformanceScore'].idxmax()]
+
+# Print results
+print("Top 5 Players Based on Performance Score:")
+print(top_players[['Player', 'Position', 'PerformanceScore']].head(5))
+
+print("\nOptimal Team Composition (Top performer per position):")
+print(optimal_team[['Player', 'Position', 'PerformanceScore']])
+
+# Further Analysis (optional): Correlation Matrix
+print("\nCorrelation of Metrics:")
+print(df[['Goals', 'Assists', 'PassAccuracy', 'Tackles', 'Rating', 'PerformanceScore']].corr())
